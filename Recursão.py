@@ -1,5 +1,6 @@
 def pesquisa_sequencial(array, key):
   def pesquisa_sequecial_recursao(array, key, index):
+    #caso base
     if len(array) == index:
       return - 1
     if array[index] == key:
@@ -21,8 +22,16 @@ def pesquisa_binaria(array, key):
       return pesquisa_binaria_recursiva(array, key, middle + 1, sup)
   return pesquisa_binaria_recursiva(array, key, 0, len(array) - 1)
 
+def soma_inteiros_ate_n(n):
+  #caso base
+  if n <= 1:
+    return n
+  return n + soma_inteiros_ate_n(n - 1)
+
 if __name__ == "__main__":
   array = [1,2,3,4,5,6,7,8,9,10]
   print(pesquisa_sequencial(array, 6))
   print(pesquisa_binaria(array, 6))
+
+  print(soma_inteiros_ate_n(10))
   
