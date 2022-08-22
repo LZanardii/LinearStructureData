@@ -1,6 +1,4 @@
-from inspect import _void
 import numpy as np
-
 
 def pesquisa_sequencial(array: np.array, key: int) -> int:
     def pesquisa_sequecial_recursao(array: np.array, key: int, index: int) -> int:
